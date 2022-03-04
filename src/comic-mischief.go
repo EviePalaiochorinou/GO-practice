@@ -30,5 +30,9 @@ func main() {
 	grade = 9.0
 
 	fmt.Println(title, "written by", writer, "drawn by", artist, "published by", publisher, "in", year, "pages:", pageNumber, "grade:", grade, "\n")
-
+	
+	fmt.Print("What is your favourite comic book?")
+	var response string
+	fmt.Scan(&response)
+	fmt.Printf("So, your favourite comic book is %v!", response)
 }
