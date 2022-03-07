@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func fuelGauge(fuel int) {
-  fmt.Printf("You have %v litres of fuel left.", fuel)
+  fmt.Printf("You have %v gallons of fuel left.", fuel)
 }
 
 func calculateFuel(planet string) int {
@@ -23,7 +23,8 @@ func calculateFuel(planet string) int {
 }
 
 func greetPlanet(planet string) {
-  fmt.Printf("Welcome to %v", planet)
+  greeting := fmt.Sprintf("Welcome to %v, alien!", planet)
+	fmt.Println(greeting)
 }
 
 func cantFly() {
@@ -45,11 +46,14 @@ func flyToPlanet(planet string, fuel int) int {
 }
 
 func main() {
-  // Test your functions!
-  fmt.Print(calculateFuel("Venus"))
-  flyToPlanet("Venus", 400000)
-  // Create `planetChoice` and `fuel`
   
-  // And then liftoff!
+  var fuel int
+  fuel = 1000000
+  var planetChoice string
+  planetChoice = "Venus"
+
+  fuel = flyToPlanet(planetChoice, fuel)
+
+  fuelGauge(fuel)
   
 }
